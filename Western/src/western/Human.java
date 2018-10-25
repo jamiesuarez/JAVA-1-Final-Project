@@ -11,27 +11,34 @@ package western;
  */
 public class Human {
     
-    String name;
-    String favoriteDrink;
+    protected String name = "";
+    protected String favoriteDrink = "";
 
     /**
      * @param args the command line arguments
      */
 
-    public static void torch(String t) {
-        
+    public Human(String name, String favoriteDrink){ 
+        this.name = name; 
+        this.favoriteDrink = favoriteDrink;
+       // introduce();
+    }
+
+    
+    protected String getName() {       
+      return this.name;
     }
     
-    public static void introduce() {
-        
+    public void speak (String say) {
+        System.out.println(name + " : " + say);    
     }
     
-//    public static String whatIsYourName() {
-//        
-//    } 
-//    
-//    public static String getDrink() {
-//        
-//    }
+    public void introduce() {
+        speak("Hello! My name is " + name + ". I am a new citizen in town.");        
+    }
+       
+    public String getDrink() {    
+        return favoriteDrink;        
+    }
     
 }

@@ -13,4 +13,6 @@ import java.io.*;
  */
 interface PaleFace {
     
+    void aScalp(Indian indian);
+    
 }

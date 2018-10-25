@@ -14,16 +14,23 @@ public class Bartender extends Human {
     
     String barName;
     
-    
-    public static void serve() {
+    public Bartender(String name, String favoriteDrink, String barName){
+        super(name, favoriteDrink);
+        this.barName = barName;
+    }
+    public void serve() {
         
     }
     
-    public static void torch(String t) {
+    public void torch(String t) {
         
     }
     
-    public static void introduce() {
+    
+    
+    @Override
+    public void introduce() {
+        speak("Welcome to " + barName + "! My name is " + name + " and it is a pleasure to serve you.");
         
     }
 }

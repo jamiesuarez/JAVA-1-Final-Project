@@ -17,4 +17,21 @@ public class BadCop extends Sheriff implements OutOfLaw {
     String look;
     Boolean isInPrison;
     
+    public BadCop(String name, String favoriteDrink, String adjective){
+        super(name, favoriteDrink, adjective);
+        
+    }
+    
+    public void beImprisoned(Cowboy cowboy){
+        
+    }
+    
+    public String whatIsYourName(){
+        return this.name;
+    }
+    
+    public String getReward(){
+            // convert int to string return this.reward;
+    }
+    
 }

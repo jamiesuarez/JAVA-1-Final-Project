@@ -13,4 +13,12 @@ import java.io.*;
  */
 interface OutOfLaw {
     
+    void kidnapLady(DistressedLady lady);
+    
+    void beImprisoned(Cowboy cowboy);
+    
+    String getReward();
+    
+    String whatIsYourName();
+    
 }

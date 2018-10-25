@@ -15,11 +15,16 @@ public class Indian extends Human {
     int nbFeathers;
     String totem;
     
-    public static void torch(String t) {
+    public Indian(String name,  String favoriteDrink, String totem){
+        super(name, favoriteDrink);
+        this.totem = totem;
+        
+    }
+    public void torch(String t) {
         
     }
     
-    public static void introduce() {
+    public void introduce() {
         
     }
 }

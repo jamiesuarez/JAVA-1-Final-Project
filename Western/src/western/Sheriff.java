@@ -10,15 +10,20 @@ package western;
  *
  * @author jamiealexis.suarez
  */
-public class Sheriff extends CowBoy {
+public class Sheriff extends Cowboy {
     
-    int nbBandits;
+    int nbCaughtBandits;
     
-    public static void busted() {
+    public Sheriff(String name, String favoriteDrink, String adjective){
+        super(name, favoriteDrink, adjective);
+        
+        
+    }
+    public static void busted(Bandit bandit, LadyBandit ladyBandit) {
         
     }
     
-    public static void search() {
+    public static void search(Bandit bandit, LadyBandit ladyBandit) {
         
     }
     
@@ -26,7 +31,5 @@ public class Sheriff extends CowBoy {
 //        
 //    } 
     
-    public static void introduce() {
-        
-    }
+    
 }
