@@ -7,9 +7,9 @@ import java.util.Scanner;
 public class Action {
 
       Random random = new Random();
-      Perso perso = new Perso();
+//      Perso perso = new Perso();
 
-      public DistressedLady lady(int choice, DistressedLady distressedLady, ArrayList<ArrayList<ArrayList<Human>>> list) {
+      public DistressedLady distressedLady(int choice, DistressedLady distressedLady, ArrayList<ArrayList<ArrayList<Human>>> list) {
             try {
                   int num = 0;
                   System.out.println(distressedLady.getClass());
@@ -21,10 +21,10 @@ public class Action {
                               break;
 
                         case 1:
-                              System.out.println("Taper le numero de l'action que vous voulez.");
-                              System.out.println("1 kidnapper une fille");
-                              System.out.println("2 changer de culotte");
-                              System.out.println("3 parler à quelqu'un");
+                              System.out.println("1 Kidnap a Lady");
+                              System.out.println("2 Change Dress");
+                              System.out.println("3 Speak with Someone");
+                              System.out.print("Input the number of your choice: ");
                               input = scanner.nextLine();
                               num = Integer.parseInt(input);
                               break;
@@ -33,9 +33,8 @@ public class Action {
                   switch (num) {
 
                         case (1):
-
-                              BanditLady banditLady = new BanditLady(0, 0, "nouvelle", false, distressedLady.hasBeenKidnapped, distressedLady.dressColor, distressedLady.name, distressedLady.favoriteDrink);
-                              list.get(0).get(0).remove(obj);
+                            BanditLady banditLady = new BanditLady(distressedLady.name, distressedLady.favoriteDrink, distressedLady.state, distressedLady.dressColor, "nouvelle", 0, distressedLady.hasBeenKidnapped, false);
+                              list.get(0).get(0).remove(distressedLady);
                               Lady girl = perso.randomLady(list.get(0));
                               while (girl == obj) {
                                     girl = perso.randomLady(list.get(0));
@@ -50,8 +49,8 @@ public class Action {
                               return badlady;
 
                         case (2):
-                              obj.getChanged();
-                              return obj;
+                              distressedLady.getChanged();
+                              return distressedLady;
 
                         case (3):
                               if (!obj.lieu.people.isEmpty()) {

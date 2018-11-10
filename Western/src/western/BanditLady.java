@@ -17,7 +17,7 @@ public class BanditLady extends DistressedLady implements OutOfLaw {
     String look;
     boolean isInPrison;
     
-    public BanditLady(String name, String favoriteDrink,String state, String dressColor, String look, int nbLadiesKidnapped, boolean hasBeenKidnapped, boolean isInPrison){
+    public BanditLady(String name, String favoriteDrink, String state, String dressColor, String look, int nbLadiesKidnapped, boolean hasBeenKidnapped, boolean isInPrison){
         super(hasBeenKidnapped, name, favoriteDrink, state, dressColor);
         this.look = look;
         this.reward = 10;
