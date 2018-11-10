@@ -13,27 +13,29 @@ package western;
 
 public class Cowboy extends Human implements PaleFace {
     
-    private int popularity = 10;
-    private String adjective;
+    int popularity = 10;
+    String adjective;
+    int cash;
    
     
-    public Cowboy(String name, String favoriteDrink, String adjective){
+    public Cowboy(String name, String favoriteDrink, String adjective, int cash, int popularity){
         super(name, favoriteDrink);
         this.adjective = adjective;
-        introduce();
+        this.cash = cash;
+        this.popularity = popularity;
     }
     
     public int getPopularity(){
         return this.popularity;
     }
     
-//    public void setPopularity(int popularity) {
-//        this.popularity = popularity;
-//    }
-//    
-//    public void setAdjective(String adjective) {
-//        this.adjective = adjective;
-//    }
+    public void setPopularity(int popularity) {
+        this.popularity = popularity;
+    }
+    
+    public void setAdjective(String adjective) {
+        this.adjective = adjective;
+    }
     
     public String getAdjective(){
         return this.adjective;
@@ -49,16 +51,20 @@ public class Cowboy extends Human implements PaleFace {
         return this.getName() + " the " + this.getAdjective();
     }
     
-    public static void shoot(Bandit bandit, LadyBandit ladyBandit) {
-        
-        
+    public void shoot(Bandit bandit, Sheriff sheriff) {
+        act(this.name + " shot " + bandit.name);
+        act("Bang!");
+        speak("I have caught you, " + bandit.name + "!");
+//        sheriff.catchAThug(badboy, lieux);
+//        getReward(badboy);
     }
     
-    public void freeLady(DistressedLady lady) {
-      this.popularity += 10;
-      
-      lady.hasBeenReleased(this);  
-        
+    public void freeLady(DistressedLady distressedLady) {
+        if (distressedLady.hasBeenKidnapped) {
+            act(this.name + " released " + distressedLady.name);
+            speak("You are free, " + distressedLady.name + "!");
+            distressedLady.hasBeenReleased(this);
+        }
     }
     
     public void aScalp(Indian indian){

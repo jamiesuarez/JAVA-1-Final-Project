@@ -11,14 +11,6 @@ import java.io.*;
  *
  * @author jamiealexis.suarez
  */
-interface OutOfLaw {
-    
-    void kidnapLady(DistressedLady lady);
-    
-    void beImprisoned(Cowboy cowboy);
-    
-    String getReward();
-    
-    String whatIsYourName();
+public interface OutOfLaw {
     
 }

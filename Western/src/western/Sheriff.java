@@ -14,16 +14,22 @@ public class Sheriff extends Cowboy {
     
     int nbCaughtBandits;
     
-    public Sheriff(String name, String favoriteDrink, String adjective){
-        super(name, favoriteDrink, adjective);
-        
-        
+    public Sheriff(int popularity, String adjective, int cash, String name, String favoriteDrink){
+        super(name, favoriteDrink, adjective, cash, popularity);
+        this.nbCaughtBandits = nbCaughtBandits;  
     }
-    public static void busted(Bandit bandit, LadyBandit ladyBandit) {
+    
+    public static void busted(Bandit bandit) {
+//        act(this.name + " capture " + badboy.name);
+//        bandit.getInJail(this, lieux);        
         
     }
     
-    public static void search(Bandit bandit, LadyBandit ladyBandit) {
+    public static void busted(BanditLady ladyBandit) {
+        
+    }
+    
+    public static void search(Bandit bandit, BanditLady ladyBandit) {
         
     }
     

@@ -18,6 +18,7 @@ public class Bartender extends Human {
         super(name, favoriteDrink);
         this.barName = barName;
     }
+    
     public void serve() {
         
     }
@@ -30,7 +31,7 @@ public class Bartender extends Human {
     
     @Override
     public void introduce() {
-        speak("Welcome to " + barName + "! My name is " + name + " and it is a pleasure to serve you.");
+        speak("My name is " + name + " and it is a pleasure to serve you.");
         
     }
 }

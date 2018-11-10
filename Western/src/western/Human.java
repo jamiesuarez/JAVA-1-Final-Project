@@ -21,24 +21,27 @@ public class Human {
     public Human(String name, String favoriteDrink){ 
         this.name = name; 
         this.favoriteDrink = favoriteDrink;
-       // introduce();
+//        introduce();
     }
-
     
     protected String getName() {       
       return this.name;
     }
+           
+    public String getDrink() {    
+        return this.favoriteDrink;        
+    }
     
-    public void speak (String say) {
+    public void speak(String say) {
         System.out.println(name + " : " + say);    
     }
     
-    public void introduce() {
-        speak("Hello! My name is " + name + ". I am a new citizen in town.");        
-    }
-       
-    public String getDrink() {    
-        return favoriteDrink;        
+    public void act(String action) {
+        System.out.println("***" + action + "***");
     }
     
+    public void introduce() {
+        act(this.name + " introduces himself");
+        speak("Hello! My name is " + name + ". I am a new citizen in town.");        
+    }
 }
